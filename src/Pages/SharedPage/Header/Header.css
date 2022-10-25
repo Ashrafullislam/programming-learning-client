@@ -1,0 +1,13 @@
+Nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+.logo{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+.navbar-title{
+    color: gold;
+}
