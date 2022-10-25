@@ -1,9 +1,21 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './LeftSideNav.css';
 const LeftSideNav = () => {
+    const [categories,setCategories] = useState([]);
+
+    useEffect(()=> {
+     fetch('http://localhost:5000/category-data')
+     .then(res => res.json())
+      .then(data => setCategories(data))
+    },[])
+
     return (
-        <div>
-            <h3> Left Side Nav </h3>
+        <div className='category'>
+            <h3> Left Side Nav {categories.length} </h3>
+            {
+                categories.map(category => <p className='category-list' key={category.id} > <Link> {category.name} </Link>    </p> )
+            }
         </div>
     );
 };

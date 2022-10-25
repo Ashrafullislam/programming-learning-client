@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-bootstrap';
+import { Button, NavLink } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -23,8 +23,9 @@ const Header = () => {
          </Nav>
 
           <Nav>
-            <Nav.Link >Sign Up </Nav.Link>
-          
+           <Button variant='secondary ' className='reigster-btn' >  <Link> Log In </Link> </Button>
+           <Button variant='secondary'  className='reigster-btn' > <Link> Sign Up </Link> </Button>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
