@@ -1,0 +1,13 @@
+.same-category-image{
+    width: 100%;
+    height: 45vh;
+    border-radius: 6px;
+}
+.premium-btn{
+    background-color: rgb(1, 1, 40)!important;
+    
+}
+.premium-btn a {
+    color: gold!important;
+    text-decoration: none;
+}

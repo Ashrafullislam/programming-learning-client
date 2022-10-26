@@ -7,7 +7,6 @@ import './Courses.css';
 const Courses = () => {
 const {userInfo} = useContext(AuthContext);
 const coursesData = useLoaderData();
-console.log(coursesData)
     return (
         <div>
            <h3 className='text-center mt-3'>  Total Courses : {coursesData.length} </h3>  

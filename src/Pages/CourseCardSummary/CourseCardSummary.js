@@ -4,11 +4,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './CourseCardSummary.css';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { Link } from 'react-router-dom';
 
 
 const CourseCardSummary = ({course}) => {
     const {name,title,_id,photoURL,discription} = course;
-    return (
+   return (
  <div className='course mt-4'>
   <Card className="text-center card-position w-100">
       <Card.Header> <h5> {title}</h5>   </Card.Header>
@@ -16,7 +17,13 @@ const CourseCardSummary = ({course}) => {
         <Card.Title> </Card.Title>
         <Image className='course-img' rounded src={photoURL} />
         <Card.Text>
-            <p className=' mt-3'> <span className='card-text'>  {discription.slice(0,150)}  </span></p>
+          { discription.length > 150?
+           
+           <p className=' mt-3'> <span className='card-text'>  {discription.slice(0,150)+'.....'} <Link to={`/course-details/${_id}`}> Read more.... </Link>  </span></p>
+           :
+           <p> {discription} </p>
+          }
+          
         </Card.Text>
         <Button variant="primary"> See more </Button>
       </Card.Body>
