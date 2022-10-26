@@ -10,7 +10,7 @@ const coursesData = useLoaderData();
 console.log(coursesData)
     return (
         <div>
-           <h3>  This is Courses {coursesData.length} </h3>  
+           <h3 className='text-center mt-3'>  Total Courses : {coursesData.length} </h3>  
            <div className='courses'>
            {
             coursesData.map(course => <CourseCardSummary key={course._id} course ={course} > </CourseCardSummary>)

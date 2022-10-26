@@ -9,9 +9,9 @@ import CardGroup from 'react-bootstrap/CardGroup';
 const CourseCardSummary = ({course}) => {
     const {name,title,_id,photoURL,discription} = course;
     return (
-        <div className='course'>
-  <Card className="text-center mt-5 w-100">
-      <Card.Header> <h4> {title}</h4>   </Card.Header>
+ <div className='course mt-4'>
+  <Card className="text-center card-position w-100">
+      <Card.Header> <h5> {title}</h5>   </Card.Header>
       <Card.Body>
         <Card.Title> </Card.Title>
         <Image className='course-img' rounded src={photoURL} />
@@ -20,9 +20,9 @@ const CourseCardSummary = ({course}) => {
         </Card.Text>
         <Button variant="primary"> See more </Button>
       </Card.Body>
-      <Card.Footer className="text-muted"> <b>  {name}</b> </Card.Footer>
+      <Card.Footer className="footer-postion"> <b>  {name}</b> </Card.Footer>
     </Card>
-        </div>
+ </div>
    
    
 
