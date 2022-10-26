@@ -8,22 +8,26 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null);
 
-const userInfo = {displayName: 'Ashrafull '}
 
 //Create user using email,password
 const CreateUser = (email,password) => {
     return createUserWithEmailAndPassword(auth,email,password);
 }
 // sign in 
-const LogIn = (email,password) => {
+const LogInHandlar = (email,password) => {
     return signInWithEmailAndPassword (auth,email,password);
 }
 // login with google 
 const LogInGoogle = (provider) => {
     return signInWithPopup(auth,provider)
-
+    
 }
-const authInfo = {user,userInfo ,CreateUser,LogIn,LogInGoogle}
+// log in with github 
+const LogInGithub = (provider) => {
+    return signInWithPopup(auth,provider )
+}
+
+const authInfo = {user,CreateUser,LogInHandlar,LogInGoogle , LogInGithub}
 
     return (
          <AuthContext.Provider value = {authInfo}> 

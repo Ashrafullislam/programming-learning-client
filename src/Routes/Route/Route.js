@@ -6,18 +6,15 @@ import CourseDetails from '../../Pages/CourseDetails/CourseDetails';
 import Courses from '../../Pages/Courses/Courses';
 import Faq from '../../Pages/Faq/Faq';
 import PremiumPage from '../../Pages/PremiumPage/PremiumPage';
+import LogIn from '../../Pages/Register/LogIn/LogIn';
+import SignUp from '../../Pages/Register/SignUp/SignUp';
 import SameCategory from '../../Pages/SameCategoryCourse/SameCategory';
 
 
 const Route = () => {
 const router = createBrowserRouter([
     {path: '/' , element: <Main > </Main>, children:[
-     {
-        path: '/',
-        
-        element: <Courses > </Courses>
-    }, 
-
+   
     {
         path: 'courses', 
         loader() {
@@ -50,6 +47,12 @@ const router = createBrowserRouter([
     {
         path: 'blog', element: <Blog > </Blog>
     }, 
+    {
+        path: 'signup' , element: <SignUp > </SignUp>
+    },
+    {
+       path: 'login' , element: <LogIn > </LogIn>
+    },
     {
         path:'*' , element:  <div> Route not found </div>
     }
