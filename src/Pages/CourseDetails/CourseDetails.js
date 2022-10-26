@@ -23,6 +23,8 @@ const CourseDetails = () => {
                 </Card.Text>
                 <Button variant="primary"> <Link className='text-light text-decoration-none' 
                  to={`/category/${category_id}`}>   Get Same Category </Link> </Button>
+              
+                 <Button className='premium-btn ms-3'> <Link to ={`/course-premium/${_id}`} > Get Premium</Link>  </Button>
             </Card.Body>
             <Card.Footer className="text-muted"> <b>  {name} </b> </Card.Footer>
           </Card>

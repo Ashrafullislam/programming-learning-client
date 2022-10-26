@@ -5,7 +5,11 @@
 }
 .premium-btn{
     background-color: rgb(1, 1, 40)!important;
-    
+}
+
+.premium-btn:hover{
+    background-color: navy!important;
+
 }
 .premium-btn a {
     color: gold!important;

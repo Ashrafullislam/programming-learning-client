@@ -1,9 +1,9 @@
 import React from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import {  Image } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './CourseCardSummary.css';
-import CardGroup from 'react-bootstrap/CardGroup';
+
 import { Link } from 'react-router-dom';
 
 
@@ -19,13 +19,14 @@ const CourseCardSummary = ({course}) => {
         <Card.Text>
           { discription.length > 150?
            
-           <p className=' mt-3'> <span className='card-text'>  {discription.slice(0,150)+'.....'} <Link to={`/course-details/${_id}`}> Read more.... </Link>  </span></p>
+           <p className=' mt-3'> <span className='card-text'>  {discription.slice(0,150)+'.....'} 
+           <Link className='d-block' to={`/course-details/${_id}`}> Read more.... </Link>  </span></p>
            :
            <p> {discription} </p>
           }
           
         </Card.Text>
-        <Button variant="primary"> See more </Button>
+        <Button className='premium-btn' > <Link to={`/course-premium/${_id}`} > Get Premium  </Link> </Button>
       </Card.Body>
       <Card.Footer className="footer-postion"> <b>  {name}</b> </Card.Footer>
     </Card>

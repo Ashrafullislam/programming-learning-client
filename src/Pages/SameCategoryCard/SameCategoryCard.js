@@ -8,7 +8,6 @@ import './SameCategoryCard.css';
 const SameCategoryCard = ({sameCategory}) => {
     const {name, title,photoURL,discription,_id} = sameCategory ;
 
-    console.log(sameCategory,'new same category card ')
     return (
     <div className='mt-3'>
      <Card className='mt-4'>
@@ -25,7 +24,7 @@ const SameCategoryCard = ({sameCategory}) => {
             <h5> {discription} </h5>
          }
         </Card.Text>
-        <Button className='premium-btn' ><Link>   Get Premium </Link> </Button>
+        <Button className='premium-btn' ><Link to={`/course-premium/${_id}`}>   Get Premium </Link> </Button>
       </Card.Body>
     </Card>
     </div>
