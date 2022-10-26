@@ -3,8 +3,8 @@ import {Col, Container, Row} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Footer.css';
 
-import { BiEnvelope, IconName } from "react-icons/bi";
-import { FaAddressBook, FaCopyright, FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter } from 'react-icons/fa';
+import { BiEnvelope,  } from "react-icons/bi";
+import {  FaCopyright, FaFacebook, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div className="footer">
@@ -41,7 +41,7 @@ const Footer = () => {
 
           
             <Col lg="4" >
-                <h5 className='text-light'> <FaPhone /> Contact us  </h5>
+                <h5 className='text-light social-icon'> <FaPhone /> Contact us  </h5>
                 <p className='social-icon'> <Link> <FaFacebook /> Facebook </Link> </p>
                 <p className='social-icon'> <Link> <FaTwitter /> Twitter </Link> </p>
                 <p className='social-icon'> <Link> <FaLinkedin /> Linkedin </Link> </p>

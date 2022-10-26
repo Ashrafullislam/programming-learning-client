@@ -10,6 +10,7 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import { FaUser } from 'react-icons/fa';
 // profile modal 
 import Modal from 'react-bootstrap/Modal';
+import LeftSideNav from '../LeftSideNav/LeftSideNav';
 
 const Header = () => { 
   const {user ,LogOut} = useContext(AuthContext);
@@ -28,6 +29,9 @@ const Header = () => {
           <Link to='/courses' > Courses </ Link> 
           <Link to='/faq' > Faq   </ Link>
           <Link to='/blog' > Blog  </ Link>
+           <div className='d-lg-none text-center'>
+            <LeftSideNav>  </LeftSideNav>
+           </div>
          </Nav>
           <Nav>
 

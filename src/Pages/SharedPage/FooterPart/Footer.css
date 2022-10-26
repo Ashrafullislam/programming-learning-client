@@ -21,3 +21,16 @@
     color: white;
     text-decoration: none;
 }
+
+@media screen and (min-width:300px) and (max-width:868px){
+    .footer-option div  {
+        text-align: center;
+    }
+    .social-icon {
+        text-align: center;
+    }
+    
+    .footer-text{
+        text-align: center;
+    }
+}
