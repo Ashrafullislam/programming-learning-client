@@ -24,7 +24,7 @@ const SignUpHandlar = (event) => {
     if(password !== confirm ){
        setError(`Password and Confirm password didn't match `)
        return ;
-
+     
     }
 
     CreateUser(email,password) 

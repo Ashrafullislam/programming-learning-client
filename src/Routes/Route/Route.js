@@ -9,12 +9,20 @@ import PremiumPage from '../../Pages/PremiumPage/PremiumPage';
 import LogIn from '../../Pages/Register/LogIn/LogIn';
 import SignUp from '../../Pages/Register/SignUp/SignUp';
 import SameCategory from '../../Pages/SameCategoryCourse/SameCategory';
+import PrivetRoute from '../PrivetRoute/PrivetRoute';
 
 
 const Route = () => {
 const router = createBrowserRouter([
     {path: '/' , element: <Main > </Main>, children:[
    
+        {
+            path: '/', 
+            loader() {
+              return fetch('http://localhost:5000/courses-data')
+            },
+            element: <Courses > </Courses>
+        }, 
     {
         path: 'courses', 
         loader() {
@@ -34,8 +42,9 @@ const router = createBrowserRouter([
        loader ({params}) {
         return fetch(`http://localhost:5000/course-details/${params.id}` )
        },
-      element: <PremiumPage > </PremiumPage>
+      element:  <PrivetRoute > <PremiumPage > </PremiumPage> </PrivetRoute>
      },
+     
     {
        path:'/category/:id', 
        loader:({params})=> fetch(`http://localhost:5000/category-course/${params.id}`),

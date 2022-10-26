@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,6 +13,9 @@ const LogIn = () => {
     const [error,setError] = useState(null);
     const googleProvider = new GoogleAuthProvider ();
     const githubProvider = new GithubAuthProvider ();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/course-premium";
 
  // sign up with email and password    
  const SignInHandlar = (event) => {
@@ -35,6 +38,7 @@ const LogIn = () => {
             progress: undefined,
             theme: "light",
             });
+            navigate(from, { replace: true }); 
     })
 
     .catch(error => {
