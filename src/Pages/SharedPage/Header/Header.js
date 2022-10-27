@@ -47,6 +47,16 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+          <div className='d-lg-none d-block'>
+          {
+               user?.photoURL?
+                <Image  onClick={() => setSmShow(true)} className='user-img' src= {user?.photoURL}
+                Title= {user.displayName}   />
+                :
+                <FaUser  onClick={() => setSmShow(true)} className='user-icon text-light' />
+              
+            }
+          </div>
            <Link to = '/home'>  Home  </Link>  
           <Link to='/courses' > Courses </ Link> 
           <Link to='/faq' > Faq   </ Link>
@@ -61,12 +71,14 @@ const Header = () => {
             {user?
               <>
                  <Button variant='secondary'  onClick={LogOut} className='reigster-btn' > Log Out </Button>
+                 <div className='d-none d-lg-block'>
                  {user?.photoURL?
                    <Image  onClick={() => setSmShow(true)} className='user-img' src= {user?.photoURL}
                    Title= {user.displayName}   />
                    :
                    <FaUser  onClick={() => setSmShow(true)} className='user-icon text-light' />
                  }
+                 </div>
                </>
                   :
                 <>
@@ -101,8 +113,10 @@ const Header = () => {
               <FaUser className='text-secondary user-profile-photo' />
            }
             <h4> User Account  </h4> 
-           <h4 className='border-lg'> {user?.displayName} </h4>
-           <h4 className='border-lg'> {user?.email} </h4>
+           <h4 > {user?.displayName} </h4>
+           <h4 > {user?.email} </h4> 
+           <Button variant='secondary'  onClick={LogOut} className='reigster-btn px-4' > Log Out </Button>
+
            </>
            
             :

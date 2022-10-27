@@ -7,7 +7,17 @@ import './PremiumPage.css';
 import {FaCheckCircle} from 'react-icons/fa';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// pdf download 
 
+// react pdf function 
+
+
+
+
+
+
+
+// react pdf function 
 const PremiumPage = () => {
   const premiumCourse = useLoaderData ();
   const {name, title, discription, photoURL, price} = premiumCourse;
@@ -27,6 +37,7 @@ const PremiumPage = () => {
   return (
     <div>
       <h3 className="text-center my-3"> Premium Page </h3>
+     
       <div>
         <Card className="text-center premium-card">
           <Card.Header> <h3> {title} </h3> </Card.Header>

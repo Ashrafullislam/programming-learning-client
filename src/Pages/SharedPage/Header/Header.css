@@ -7,6 +7,16 @@ Nav a{
     color: white;
     margin-right: 20px;
 }
+
+.navbar-toggler {
+    /* color: rgb(249 246 246 / 55%); */
+    /* background-color: transparent; */
+    /* border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color); */
+    border: 1px solid  wheat!important;
+    background-color: gray!important ;
+}
+
+
 .logo{
     width: 35px;
     height: 35px;
@@ -92,4 +102,22 @@ Nav a{
   
   .theme-icon:hover{
     color: #fff;
+  }
+
+  @media screen and (min-width: 250px) and (max-width: 868px){
+    .modal{
+        display: flex!important;
+        justify-content: center;
+    
+            top: 10%!important;
+            left: 10%!important;
+            display: none;
+            width: 80%!important;
+            height: 80%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            outline: 0;
+    
+        
+    }
   }
