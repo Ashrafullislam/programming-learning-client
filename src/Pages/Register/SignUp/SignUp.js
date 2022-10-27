@@ -31,7 +31,7 @@ const SignUpHandlar = (event) => {
     .then(result => {
         const user = result.user ;
      
-        toast.success('Thnak you for checkout ', {
+        toast.success('Congratulation ! Sign Up successfull  ', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
@@ -41,7 +41,7 @@ const SignUpHandlar = (event) => {
             progress: undefined,
             theme: "light",
             });
-         
+         setError(null)
          form.reset();
     })
     .catch(error => {
