@@ -5,6 +5,7 @@ import Blog from '../../Pages/Blog/Blog';
 import CourseDetails from '../../Pages/CourseDetails/CourseDetails';
 import Courses from '../../Pages/Courses/Courses';
 import Faq from '../../Pages/Faq/Faq';
+import Home from '../../Pages/Home/Home';
 import PremiumPage from '../../Pages/PremiumPage/PremiumPage';
 import LogIn from '../../Pages/Register/LogIn/LogIn';
 import SignUp from '../../Pages/Register/SignUp/SignUp';
@@ -18,11 +19,13 @@ const router = createBrowserRouter([
    
         {
             path: '/', 
-            loader() {
-              return fetch('http://localhost:5000/courses-data')
-            },
-            element: <Courses > </Courses>
+          
+            element: <Home> </Home>
         }, 
+        {
+          path: '/home',
+          element: <Home>  </Home>
+        },
     {
         path: 'courses', 
         loader() {

@@ -20,12 +20,13 @@ const Header = () => {
 
     return (
     <div>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed='top'>
       <Container>
         <Navbar.Brand  > <img className='logo' src={logo} alt='Logo' /> <span className='navbar-title'>  Programming Learning</span> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+           <Link to = '/home'>  Home  </Link>  
           <Link to='/courses' > Courses </ Link> 
           <Link to='/faq' > Faq   </ Link>
           <Link to='/blog' > Blog  </ Link>
