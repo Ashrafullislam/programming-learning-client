@@ -6,7 +6,7 @@ const Home = () => {
   const {userInfo} = useContext(AuthContext);
     return (
         <div className='mt-4'>
-            <h2 className='text-center mt-3 premium-text'>  Wellcome to our Programming Learning  </h2>
+            <h2 className='text-center mt-3 '>  Wellcome to our Programming Learning  </h2>
             <CarouselHome > </CarouselHome>  
         
         </div>

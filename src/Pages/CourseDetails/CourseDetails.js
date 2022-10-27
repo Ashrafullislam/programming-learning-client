@@ -13,7 +13,7 @@ const CourseDetails = () => {
     
     return (
         <div>
-        <h3 className='text-center mt-3 text-secondary'> Details of This  Course   </h3>
+        <h3 className='text-center mt-3 '> Details of This  Course   </h3>
         <Pdf key={_id} course = {course} > </Pdf> 
         <div className = 'single-card'>
          <Card className="text-center">

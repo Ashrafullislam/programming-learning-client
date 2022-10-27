@@ -29,28 +29,28 @@ const router = createBrowserRouter([
     {
         path: 'courses', 
         loader() {
-          return fetch('http://localhost:5000/courses-data')
+          return fetch('https://learncomputerscienceapi.vercel.app/courses-data')
         },
         element: <Courses > </Courses>
     }, 
     {
       path:'/course-details/:id', 
       loader({params}) {
-         return fetch(`http://localhost:5000/course-details/${params.id}` )
+         return fetch(`https://learncomputerscienceapi.vercel.app/course-details/${params.id}` )
       },
       element:<CourseDetails> </CourseDetails>
     },
      {
        path:'/course-premium/:id', 
        loader ({params}) {
-        return fetch(`http://localhost:5000/course-details/${params.id}` )
+        return fetch(`https://learncomputerscienceapi.vercel.app/course-details/${params.id}` )
        },
       element:  <PrivetRoute > <PremiumPage > </PremiumPage> </PrivetRoute>
      },
      
     {
        path:'/category/:id', 
-       loader:({params})=> fetch(`http://localhost:5000/category-course/${params.id}`),
+       loader:({params})=> fetch(`https://learncomputerscienceapi.vercel.app/category-course/${params.id}`),
        element: <SameCategory> </SameCategory>
     },
     {

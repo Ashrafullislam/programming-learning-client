@@ -134,6 +134,9 @@ Nav a{
             overflow-y: auto;
             outline: 0;
     
-        
+    }
+    .reigster-btn {
+        margin-top: 10px !important;
+        width: 100% !important;
     }
   }

@@ -31,7 +31,7 @@ const SignUpHandlar = (event) => {
     .then(result => {
         const user = result.user ;
      
-        toast.success('Congratulation ! Sign Up successfull  ', {
+        toast.success('Congratulation !Sign Up successfull  ', {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
