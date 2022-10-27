@@ -9,12 +9,11 @@ import Pdf from '../Pdf/Pdf';
 const CourseDetails = () => {
     const course = useLoaderData()
     const {name,title,discription ,photoURL,_id,category_id} = course ;
-    console.log(course)
+    console.log(course ,'courser details ')
     
     return (
         <div>
         <h3 className='text-center mt-3 '> Details of This  Course   </h3>
-        <Pdf key={_id} course = {course} > </Pdf> 
         <div className = 'single-card'>
          <Card className="text-center">
            <Card.Header>  <h4> {title} </h4> </Card.Header>

@@ -27,7 +27,7 @@ const router = createBrowserRouter([
           element: <Home>  </Home>
         },
     {
-        path: 'courses', 
+        path: '/courses', 
         loader() {
           return fetch('https://learncomputerscienceapi.vercel.app/courses-data')
         },
