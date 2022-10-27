@@ -6,7 +6,7 @@ const SameCategory = () => {
     const sameCategories = useLoaderData()
     return (
         <div>
-            <h3> Same Category Course {sameCategories.length} </h3>
+            <h3 className='mt-4'> Same Category Course {sameCategories.length} </h3>
              {
                 sameCategories.map(sameCategory => < SameCategoryCard key={sameCategory.id} 
                     sameCategory = {sameCategory} 

@@ -8,10 +8,10 @@ import LeftSideNav from '../../Pages/SharedPage/LeftSideNav/LeftSideNav';
 const Main = () => {
     return (
         <div>
-         <Header > </Header>
-         <Container>
+         <Header className = 'mb-2' > </Header>
+         <Container className='mt-5'>
           <Row> 
-            <Col lg= '3' className='d-none d-lg-block mt-2' > 
+            <Col lg= '3' className='d-none d-lg-block mt-4' > 
       
            <LeftSideNav > </LeftSideNav>
           

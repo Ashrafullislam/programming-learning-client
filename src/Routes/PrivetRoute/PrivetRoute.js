@@ -6,16 +6,16 @@ import { Navigate, useLocation } from 'react-router-dom';
 const PrivetRoute = ({children}) => {
     const location  = useLocation()
     const {user,loading} = useContext(AuthContext);
-    if(loading) {
-        <div> Loading.... </div> 
+    if(loading){
+        return   <Spinner animation="border" variant="primary" />
     }
-    if(user && user.uid){
-        return children ;
+  
+    if(!user){
+        return <Navigate to= '/login' state={{ from: location }} replace > </Navigate>
+
     }
+    return children ;
 
-    return <Navigate to="/login" state={{ from: location }} replace />; 
-
-    
 };
 
 export default PrivetRoute;

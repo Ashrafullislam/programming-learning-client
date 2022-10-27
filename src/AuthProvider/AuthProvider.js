@@ -6,40 +6,41 @@ export  const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
-const [user,setUser] = useState(null);
-const [loading,setLoading] = useState(true);
+ const [loading,setLoading] = useState(true);
+const [user,setUser] = useState({});
+
 
 
 //Create user using email,password
 const CreateUser = (email,password) => {
-    setLoading(true)
+    setLoading(true) ;
     return createUserWithEmailAndPassword(auth,email,password);
 }
 // sign in 
 const LogInHandlar = (email,password) => {
-    setLoading(true)
+    setLoading(true) ;
     return signInWithEmailAndPassword (auth,email,password);
 }
 // login with google 
 const LogInGoogle = (provider) => {
-    setLoading(true)
+    setLoading(true) ;
     return signInWithPopup(auth,provider)
     
 }
 // log in with github 
 const LogInGithub = (provider) => {
-    setLoading(true)
+    setLoading(true) ;
     return signInWithPopup(auth,provider )
 }
 // log out handlar 
 const LogOut = () => {
-    setLoading(true)
+    setLoading(true) ;
     signOut(auth)
 }
 // user auth state monitoring and set user 
 useEffect(()=> {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-        setLoading(true)
+        setLoading(false) ;
         setUser(currentUser);
     })
     return () => {

@@ -15,7 +15,7 @@ const LogIn = () => {
     const githubProvider = new GithubAuthProvider ();
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/course-premium";
+    const from = location.state?.from?.pathname || "/";
 
  // sign up with email and password    
  const SignInHandlar = (event) => {
@@ -38,7 +38,9 @@ const LogIn = () => {
             progress: undefined,
             theme: "light",
             });
+            form.reset()
             navigate(from, { replace: true }); 
+            setError(null)
     })
 
     .catch(error => {

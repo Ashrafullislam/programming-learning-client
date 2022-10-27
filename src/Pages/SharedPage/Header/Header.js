@@ -43,10 +43,10 @@ const Header = () => {
     <div className=  {`Header ${theme}`}  > 
     <Navbar collapseOnSelect expand="lg"  className='nav-color' fixed='top'>
       <Container>
-        <Navbar.Brand  > <img className='logo' src={logo} alt='Logo' /> <span className='navbar-title'>  Programming Learning</span> </Navbar.Brand>
+        <Navbar.Brand  > <img className='logo' src={logo} alt='Logo' /> <span className='navbar-title'>  Learn-computer-science</span> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto text-center d-flex align-items-center">
           <div className='d-lg-none d-block'>
           {
                user?.photoURL?
@@ -62,7 +62,7 @@ const Header = () => {
           <Link to='/faq' > Faq   </ Link>
           <Link to='/blog' > Blog  </ Link>
           <BsFillSunFill className='theme-icon' onClick={toggleTheme} /> 
-           <div className='d-lg-none text-center'>
+           <div className='d-lg-none d-flex align-items-sm-start text-start category-small'>
             <LeftSideNav>  </LeftSideNav>
            </div>
          </Nav>

@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Image } from 'react-bootstrap';
 import './CourseDetails.css';
+import Pdf from '../Pdf/Pdf';
+
 const CourseDetails = () => {
     const course = useLoaderData()
     const {name,title,discription ,photoURL,_id,category_id} = course ;
@@ -12,6 +14,7 @@ const CourseDetails = () => {
     return (
         <div>
         <h3 className='text-center mt-3 text-secondary'> Details of This  Course   </h3>
+        <Pdf key={_id} course = {course} > </Pdf> 
         <div className = 'single-card'>
          <Card className="text-center">
            <Card.Header>  <h4> {title} </h4> </Card.Header>

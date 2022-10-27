@@ -1,3 +1,4 @@
+/* navbar background color  */
 .nav-color{
     background-color: #01013d!important;
 }
@@ -16,7 +17,7 @@ Nav a{
     background-color: gray!important ;
 }
 
-
+/* navbar logo */
 .logo{
     width: 35px;
     height: 35px;
@@ -25,10 +26,14 @@ Nav a{
 .navbar-title{
     color: gold;
 }
+
+/* register btn  */
 .reigster-btn{
     margin-right: 20px;
     text-align: center;
 }
+
+/* user profile icon in navbar  */
 .user-img{
     width: 40px;
     height: 40px;
@@ -45,6 +50,13 @@ Nav a{
     border-radius: 50%;
     
 }
+/* category of course nav option  */
+.category-small{
+    line-height: 20px;
+}
+
+
+/* open modal by click user profile  */
 .modal{
     display: flex!important;
     justify-content: center;
@@ -57,7 +69,6 @@ Nav a{
         overflow-x: hidden;
         overflow-y: auto;
         outline: 0;
-
     
 }
 .modal-header{
@@ -84,9 +95,11 @@ Nav a{
     height: 60vh!important;
 }
 
+/* light and dark mode  */
+
 .dark {
     background-color: #333;
-    color:rgb(7, 7, 71);
+    color:rgb(4, 104, 185) ;
   }
   .light {
     background-color: #fff;
@@ -98,12 +111,15 @@ Nav a{
     height: 25px;
     color: wheat;
     margin-left: 15px;
+    margin: 10px auto;
   }
   
   .theme-icon:hover{
     color: #fff;
   }
 
+
+  /* responsive section  */
   @media screen and (min-width: 250px) and (max-width: 868px){
     .modal{
         display: flex!important;

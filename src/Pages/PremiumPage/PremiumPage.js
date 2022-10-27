@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Image} from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -7,20 +7,12 @@ import './PremiumPage.css';
 import {FaCheckCircle} from 'react-icons/fa';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// pdf download 
-
-// react pdf function 
 
 
-
-
-
-
-
-// react pdf function 
 const PremiumPage = () => {
   const premiumCourse = useLoaderData ();
-  const {name, title, discription, photoURL, price} = premiumCourse;
+  const [courseId,setCourseId] = useState(null) 
+  const {name, title, discription, photoURL, price,_id} = premiumCourse;
   const checkOutHandlar = () => {
     toast.success('Thnak you for checkout ', {
       position: "top-center",
@@ -32,12 +24,13 @@ const PremiumPage = () => {
       progress: undefined,
       theme: "light",
       });
+      setCourseId( _id)
   }
 
   return (
     <div>
       <h3 className="text-center my-3"> Premium Page </h3>
-     
+       <h3 className='my-2'> Course Id:  {courseId} </h3>
       <div>
         <Card className="text-center premium-card">
           <Card.Header> <h3> {title} </h3> </Card.Header>
