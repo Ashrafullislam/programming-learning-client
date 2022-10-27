@@ -34,6 +34,17 @@ Nav a{
 .modal{
     display: flex!important;
     justify-content: center;
+
+        top: 10%!important;
+        left: 70%!important;
+        display: none;
+        width: 30%!important;
+        height: 80%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        outline: 0;
+
+    
 }
 .modal-header{
  display: flex!important;
@@ -46,3 +57,35 @@ Nav a{
     justify-content: center;
     align-items: center;
 }
+
+
+
+.modal-backdrop {
+    --bs-backdrop-zindex: 1!important;
+    --bs-backdrop-opacity: 0.2!important;
+    position: fixed;
+    top: 10%!important;
+    left: 0!important;
+    width: 100vw!important;
+    height: 60vh!important;
+}
+
+.dark {
+    background-color: #333;
+    color:rgb(7, 7, 71);
+  }
+  .light {
+    background-color: #fff;
+    color: #333;
+  }
+  .theme-icon{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    color: wheat;
+    margin-left: 15px;
+  }
+  
+  .theme-icon:hover{
+    color: #fff;
+  }
