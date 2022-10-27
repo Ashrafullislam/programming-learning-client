@@ -41,7 +41,7 @@ const Header = () => {
 
     return (
     <div className=  {`Header ${theme}`}  > 
-    <Navbar collapseOnSelect expand="lg" bg="dark" className='nav-color' fixed='top'>
+    <Navbar collapseOnSelect expand="lg"  className='nav-color' fixed='top'>
       <Container>
         <Navbar.Brand  > <img className='logo' src={logo} alt='Logo' /> <span className='navbar-title'>  Programming Learning</span> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
